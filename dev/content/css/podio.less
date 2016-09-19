@@ -1,0 +1,287 @@
+﻿//@import "bootstrap.min.css";
+
+@white : #fff;
+@podiofontcolor : #444;
+@podiofontcolor2 : #3376A4;
+@podiofontcolor3 : #AAA;
+@podiofontcolor4 : #CCC;
+@podiobordercolor: #CCC;
+@podiobordercolor2: #e8e8e8;
+@focuseditem: #e8f1f8;
+@orgnamecolor: #5092BD;
+@buttonbackground : #EEE;
+
+html{
+    color: @podiofontcolor;
+    font-family: arial,sans-serif;
+    min-width: 900px;
+}
+
+// copied from prod Podio site
+body {
+    font-size: 13px;
+    font-size: 1.3rem;
+    background: #e9e9e9;
+    line-height: 160%;
+    
+}
+
+// copied from prod Podio site
+#header-global {
+    height: 41px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+    background: #5092BD;
+    border-bottom: 1px solid #3A6A8A;
+    transition: all .2s ease-in-out;
+    transition-property: right,margin-right;
+    margin-right: 0;
+}
+
+// copied from prod Podio site
+.button-new {
+    font-size: 13px;
+    font-size: 1.3rem;
+    border-radius: 2px;
+    display: inline-block;
+    line-height: 24px;
+    margin-bottom: 4px;
+    font-weight: 400;
+    text-shadow: none;
+    padding: 1px 10px;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 0;
+}
+
+// copied from prod Podio site -> id & class names changed
+// edited a bit
+.navbar-nav>li.selected:after {
+    content: '';
+    background: url(../images/header_navitem_selected.png);
+    display: block;
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    width: 10px;
+    height: 5px;
+    margin-left: -6px;
+}
+
+.button-new{
+    background-color: @buttonbackground;
+    border: 1px solid @buttonbackground;
+    &:hover{
+        border: 1px solid @podiobordercolor2;
+    }
+}
+
+.navbar-open {
+    border-radius: 10px 10px 0px 0px;
+    border: 1px solid @podiobordercolor;
+    border-bottom: none;
+    background-color: @white;
+    color: @podiofontcolor !important;
+}
+
+.navbar-nav > li > a {
+    color: @white;
+    margin-top: 7px;
+    padding-top: 8px;
+    padding-bottom: 15px;
+    border: 1px solid transparent;
+
+    &:hover, &:focus {
+        .navbar-open;
+        outline: none;
+    }
+}
+
+.navbar-nav > li > a.navbar-open {
+    .navbar-open;
+}
+
+div .scrollable {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px @podiobordercolor;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: @podiobordercolor;
+    -webkit-box-shadow: inset 0 0 5px @podiobordercolor2;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#podioSpaces {
+    position: fixed;
+    width: 266px;
+    max-height: calc(~'80% - 41px');
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+    background-color: @white;
+    border-radius: 0px 0px 5px 5px;
+    border: 1px solid @podiobordercolor;
+    border-top: none;
+
+    > div {
+        width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+
+        &:focus {
+            background-color: @focuseditem;
+            outline: none;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+
+        li {
+            border-bottom: 1px solid @podiobordercolor;
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+        }
+    }
+
+
+    div {
+        display: inline-block;
+    }
+
+    mark {
+        background-color: yellow;
+        font-style: italic;
+    }
+
+    .searchDiv {
+        width: 100%;
+        color: @podiofontcolor;
+        border-bottom: 1px solid @podiobordercolor;
+
+        label {
+            width: 100%;
+        }
+
+        .glyphicon {
+            //color: @podiofontcolor3;
+            left: 20px;
+        }
+
+        input {
+            text-indent: 25px;
+            width: 90%;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-weight: normal;
+        }
+    }
+
+    .orgContainer {
+        width: 100%;
+
+        .errorContainer {
+            font-style: italic;
+            margin: 10px 20px;
+            color: @podiofontcolor4;
+        }
+
+        .addSpace {
+            text-align: center;
+            width: 100%;
+
+            .glyphicon {
+                padding-right: 4px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .thumbDiv {
+        vertical-align: top;
+        padding: 4px 8px;
+    }
+
+    .orgDiv {
+        width: calc(~'100% - 48px');
+        border-left: 1px solid @podiobordercolor;
+        padding: 10px 0px;
+
+        > a {
+            padding: 2px 0px 2px 5px;
+            display: inline-block;
+            width: 100%;
+
+            &:hover {
+                cursor: pointer;
+                background-color: @focuseditem;
+            }
+        }
+    }
+
+    .orgName {
+        color: @orgnamecolor;
+        font-weight: bolder;
+
+        &:hover {
+            cursor: pointer;
+            background-color: @focuseditem;
+        }
+    }
+
+    .img-thumbnail {
+        border: none;
+        max-width: 32px;
+        padding: 0px;
+    }
+
+    .spaceli {
+        width: 100%;
+        border-bottom: none;
+
+        a {
+            text-decoration: none;
+            color: @podiofontcolor;
+            display: inline-block;
+            width: inherit;
+            padding: 2px;
+            padding-left: 10px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: @focuseditem;
+            text-decoration: none;
+            width: 100%;
+        }
+    }
+
+    .newSpace a {
+        color: @podiofontcolor3;
+    }
+}

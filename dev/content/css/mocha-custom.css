@@ -1,0 +1,25 @@
+﻿body {
+    background-color: #355432;
+    background-image: url(../images/Desktop-splash-large.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+#mocha .test pre{
+    background-color: #26362c;
+}
+
+#mocha .test.fail {
+    background-color: #26362c;
+}
+
+#mocha .test.fail pre {
+    color: white;
+}
+#mocha .test pre.error {
+    color: #c00;
+}
+#mocha-stats {
+    color:white;
+}

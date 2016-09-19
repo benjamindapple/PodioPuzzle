@@ -1,0 +1,233 @@
+﻿html {
+  color: #444444;
+  font-family: arial, sans-serif;
+  min-width: 900px;
+}
+body {
+  font-size: 13px;
+  font-size: 1.3rem;
+  background: #e9e9e9;
+  line-height: 160%;
+}
+#header-global {
+  height: 41px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  background: #5092BD;
+  border-bottom: 1px solid #3A6A8A;
+  transition: all 0.2s ease-in-out;
+  transition-property: right, margin-right;
+  margin-right: 0;
+}
+.button-new {
+  font-size: 13px;
+  font-size: 1.3rem;
+  border-radius: 2px;
+  display: inline-block;
+  line-height: 24px;
+  margin-bottom: 4px;
+  font-weight: 400;
+  text-shadow: none;
+  padding: 1px 10px;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 0;
+}
+.navbar-nav > li.selected:after {
+  content: '';
+  background: url(../images/header_navitem_selected.png);
+  display: block;
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 10px;
+  height: 5px;
+  margin-left: -6px;
+}
+.button-new {
+  background-color: #eeeeee;
+  border: 1px solid #eeeeee;
+}
+.button-new:hover {
+  border: 1px solid #e8e8e8;
+}
+.navbar-open {
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid #cccccc;
+  border-bottom: none;
+  background-color: #ffffff;
+  color: #444444 !important;
+}
+.navbar-nav > li > a {
+  color: #ffffff;
+  margin-top: 7px;
+  padding-top: 8px;
+  padding-bottom: 15px;
+  border: 1px solid transparent;
+}
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid #cccccc;
+  border-bottom: none;
+  background-color: #ffffff;
+  color: #444444 !important;
+  outline: none;
+}
+.navbar-nav > li > a.navbar-open {
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid #cccccc;
+  border-bottom: none;
+  background-color: #ffffff;
+  color: #444444 !important;
+}
+div .scrollable {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px #cccccc;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  -webkit-box-shadow: inset 0 0 5px #e8e8e8;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+#podioSpaces {
+  position: fixed;
+  width: 266px;
+  max-height: calc(80% - 41px);
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 0px 0px 5px 5px;
+  border: 1px solid #cccccc;
+  border-top: none;
+}
+#podioSpaces > div {
+  width: 100%;
+}
+#podioSpaces a {
+  text-decoration: none;
+}
+#podioSpaces a:focus {
+  background-color: #e8f1f8;
+  outline: none;
+}
+#podioSpaces ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+#podioSpaces ul li {
+  border-bottom: 1px solid #cccccc;
+}
+#podioSpaces ul li:last-of-type {
+  border-bottom: none;
+}
+#podioSpaces div {
+  display: inline-block;
+}
+#podioSpaces mark {
+  background-color: yellow;
+  font-style: italic;
+}
+#podioSpaces .searchDiv {
+  width: 100%;
+  color: #444444;
+  border-bottom: 1px solid #cccccc;
+}
+#podioSpaces .searchDiv label {
+  width: 100%;
+}
+#podioSpaces .searchDiv .glyphicon {
+  left: 20px;
+}
+#podioSpaces .searchDiv input {
+  text-indent: 25px;
+  width: 90%;
+  border-radius: 4px;
+  margin: 10px 0;
+  font-weight: normal;
+}
+#podioSpaces .orgContainer {
+  width: 100%;
+}
+#podioSpaces .orgContainer .errorContainer {
+  font-style: italic;
+  margin: 10px 20px;
+  color: #cccccc;
+}
+#podioSpaces .orgContainer .addSpace {
+  text-align: center;
+  width: 100%;
+}
+#podioSpaces .orgContainer .addSpace .glyphicon {
+  padding-right: 4px;
+}
+#podioSpaces .orgContainer .addSpace a {
+  text-decoration: none;
+}
+#podioSpaces .thumbDiv {
+  vertical-align: top;
+  padding: 4px 8px;
+}
+#podioSpaces .orgDiv {
+  width: calc(100% - 48px);
+  border-left: 1px solid #cccccc;
+  padding: 10px 0px;
+}
+#podioSpaces .orgDiv > a {
+  padding: 2px 0px 2px 5px;
+  display: inline-block;
+  width: 100%;
+}
+#podioSpaces .orgDiv > a:hover {
+  cursor: pointer;
+  background-color: #e8f1f8;
+}
+#podioSpaces .orgName {
+  color: #5092bd;
+  font-weight: bolder;
+}
+#podioSpaces .orgName:hover {
+  cursor: pointer;
+  background-color: #e8f1f8;
+}
+#podioSpaces .img-thumbnail {
+  border: none;
+  max-width: 32px;
+  padding: 0px;
+}
+#podioSpaces .spaceli {
+  width: 100%;
+  border-bottom: none;
+}
+#podioSpaces .spaceli a {
+  text-decoration: none;
+  color: #444444;
+  display: inline-block;
+  width: inherit;
+  padding: 2px;
+  padding-left: 10px;
+}
+#podioSpaces .spaceli:hover {
+  cursor: pointer;
+  background-color: #e8f1f8;
+  text-decoration: none;
+  width: 100%;
+}
+#podioSpaces .newSpace a {
+  color: #aaaaaa;
+}
